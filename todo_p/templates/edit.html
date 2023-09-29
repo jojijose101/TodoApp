@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="container">
+<div class="row">
+        <div class="col-md-12 mt-5">
+        <form method="post" class="p-4 shadow" >
+
+            {% csrf_token %}
+        <div class="mb-2">
+                <input class="form-control" type="text" name="task" value="{{task.task}}" >
+        </div>
+            <div class="mp-2">
+                <input class="form-control" type="number" name="priority" value="{{task.priority}}">
+        </div>
+
+            <div class="mt-2">
+                <input class="form-control" type="date" name="date" value="{{task.date}}">
+        </div>
+
+            <button type="submit" class="btn btn btn-primary mt-2">Submit</button>
+
+        </form>
+            </div>
+    </div>
+
+{% endblock %}
